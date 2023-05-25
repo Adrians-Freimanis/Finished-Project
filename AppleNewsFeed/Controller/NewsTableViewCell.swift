@@ -24,4 +24,14 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var searchTextView: UITextView!
     
     
+    
+    
+    @IBOutlet weak var sourceLabel: UILabel!
+    
+    @IBOutlet weak var publishedAtLabel: UILabel!
+    
+    
+    
+    @IBOutlet weak var newsPublishedAtLabel: UILabel!
+    @IBOutlet weak var newsSourceLabel: UILabel!
 }

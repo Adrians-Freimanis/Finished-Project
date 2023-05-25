@@ -12,6 +12,7 @@ import CoreData
 class NewsFeedViewController: UIViewController, UIPopoverPresentationControllerDelegate {
 
     private var newsItems: [Article] = []
+    private var sourceItems: [Source] = []
     
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
@@ -244,10 +245,13 @@ extension NewsFeedViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath) as? NewsTableViewCell else { return UITableViewCell() }
         
         let item = newsItems[indexPath.row]
+        
         cell.newsTitleLabel.text = item.title ?? ""
         cell.newsTitleLabel.numberOfLines = 0
         cell.newsTextView.text = item.description ?? ""
         cell.newsImageView.sd_setImage(with: URL(string: item.urlToImage ?? ""))
+        cell.newsSourceLabel.text = item.source?.name
+        cell.newsPublishedAtLabel.text = item.publishedAt
         cell.selectionStyle = .none
         return cell
     }

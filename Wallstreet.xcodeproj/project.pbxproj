@@ -23,7 +23,6 @@
 		680184312A0BC79F00AD1C3A /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680184302A0BC79F00AD1C3A /* WebViewController.swift */; };
 		680184342A0BD00B00AD1C3A /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 680184332A0BD00B00AD1C3A /* SDWebImage */; };
 		A42387A52A1E618500FED282 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42387A42A1E618500FED282 /* SearchViewController.swift */; };
-		A42387A72A1F50AB00FED282 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42387A62A1F50AB00FED282 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +43,6 @@
 		6801842E2A0BC76200AD1C3A /* DeatilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeatilViewController.swift; sourceTree = "<group>"; };
 		680184302A0BC79F00AD1C3A /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		A42387A42A1E618500FED282 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		A42387A62A1F50AB00FED282 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +116,6 @@
 				680184302A0BC79F00AD1C3A /* WebViewController.swift */,
 				6801842A2A0BC58F00AD1C3A /* SavedTableViewController.swift */,
 				A42387A42A1E618500FED282 /* SearchViewController.swift */,
-				A42387A62A1F50AB00FED282 /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -234,7 +231,6 @@
 				6801842F2A0BC76200AD1C3A /* DeatilViewController.swift in Sources */,
 				680184082A0BC27B00AD1C3A /* AppDelegate.swift in Sources */,
 				680184252A0BC31400AD1C3A /* Alert.swift in Sources */,
-				A42387A72A1F50AB00FED282 /* ProfileViewController.swift in Sources */,
 				6801840A2A0BC27B00AD1C3A /* SceneDelegate.swift in Sources */,
 				6801842D2A0BC5B500AD1C3A /* NewsTableViewCell.swift in Sources */,
 			);

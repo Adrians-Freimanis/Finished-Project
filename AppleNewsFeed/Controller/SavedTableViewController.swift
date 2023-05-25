@@ -69,15 +69,16 @@ class SavedTableViewController: UITableViewController {
     
     
     func loadCoreData(){
-        let request: NSFetchRequest<Items> = Items.fetchRequest()
-        do {
-            savedItems = try (context?.fetch(request))!
-            tableView.reloadData()
-        }catch{
-            print(error)
-        }
-        tableView.reloadData()
-    }
+          let request: NSFetchRequest<Items> = Items.fetchRequest()
+          do {
+              savedItems = try (context?.fetch(request))!
+              tableView.reloadData()
+          }catch{
+              print(error)
+          }
+          tableView.reloadData()
+          countItems()
+      }
     
     func saveCoreData(){
         //#warning("save into core data")

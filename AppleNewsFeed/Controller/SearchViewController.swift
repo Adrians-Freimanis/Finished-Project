@@ -36,6 +36,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         table.delegate = self
         table.dataSource = self
         searchBar.delegate = self
+        
+        searchBar.placeholder = "Search Articles"
 
     }
     
@@ -50,10 +52,11 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     
     private func filterText(_ searchText: String) {
-        // Check if searchText is empty, if yes, set filteredData to newsItems
+        // Check if searchText is empty
         if searchText.isEmpty {
-            filteredData = newsItems
+            isFiltering = false
         } else {
+            isFiltering = true
             // Use Swift's `filter` method to filter `newsItems` by `title`
             filteredData = newsItems.filter { article in
                 // Return `true` if `article.title` contains `searchText`, `false` otherwise
@@ -93,13 +96,12 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
-//        if !filteredData.isEmpty {
-//            return filteredData.count
-//        }
-//
-//        return filtered  ? 0 :  newsItems.count
+        if isFiltering {
+                   return filteredData.count
+               } else {
+                   return 0
+               }
         
-        return filteredData.count
     }
     
     
@@ -133,6 +135,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.searchTitleLabel.numberOfLines = 0
         cell.searchTextView.text = item.description ?? ""
         cell.searchImageView.sd_setImage(with: URL(string: item.urlToImage ?? ""))
+        cell.publishedAtLabel.text = item.publishedAt
+        cell.sourceLabel.text = item.source?.name
         cell.selectionStyle = .none
 
         return cell
