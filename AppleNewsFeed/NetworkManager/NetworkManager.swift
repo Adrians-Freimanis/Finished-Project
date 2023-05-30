@@ -2,7 +2,7 @@
 //  NetworkManager.swift
 //  RestCountriesApp
 //
-//  Created by Arkadijs Makarenko on 08/05/2023.
+//  Created by adrians.freimanis on 19/05/2023.
 //
 
 import Foundation

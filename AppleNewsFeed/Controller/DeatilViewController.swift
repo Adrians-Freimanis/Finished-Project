@@ -2,7 +2,7 @@
 //  DeatilViewController.swift
 //  AppleNewsFeed
 //
-//  Created by Arkadijs Makarenko on 10/05/2023.
+//  Created by adrians.freimanis on 19/05/2023.
 //
 
 import UIKit
